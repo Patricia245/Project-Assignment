@@ -3,20 +3,7 @@ from collections import deque
 from models.process import Process
 
 def round_robin_scheduling(processes, quantum):
-    """
-    Round Robin Scheduling Algorithm.
-    This function simulates the Round Robin CPU scheduling algorithm.
-    
-    Args:
-        processes (list): List of Process objects, each representing a process.
-        quantum (int): Time quantum for the Round Robin scheduling.
-
-    Returns:
-        dict: A dictionary containing:
-            - 'rows': List of dictionaries with process details (name, arrival, burst, etc.).
-            - 'avg_waiting_time': Average waiting time of all processes.
-            - 'avg_turnaround_time': Average turnaround time of all processes.
-    """
+  
     # Sort processes by their arrival time.
     processes.sort(key=lambda p: p.arrival_time)
     n = len(processes)  # Total number of processes
